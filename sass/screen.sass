@@ -1,0 +1,136 @@
+@import compass/reset
+@import utils
+
+
+
+*
+	box-sizing: border-box
+
+// site base
+
+$primary: #B9D200
+$primary-dark: #479000
+
+$secondary: #EA6C39
+$secondary-dark: #431F00
+
+
+
+.t-shadow
+	text-shadow: 0px 3px 10px rgba(100, 100, 100, 1)
+
+.r-borders
+	border-radius: 20px
+
+button.more
+	@extend .t-medium
+	@extend .t-4
+	@extend .s-pxl-v
+	background: none
+	border: none
+
+	i
+		color: $primary
+
+
+
+// containers
+.content
+	width: 960px
+	margin: 0 auto
+	@extend .s-pxl
+
+
+// Global overrides
+
+body
+	line-height: 1.2
+	@extend .t-regular
+	@extend .t-4
+	@extend .s-ps
+	padding: 0
+	color: $grey-2
+
+.pure-g [class *="pure-u"]
+	font-family: 'Source Sans Pro', sans-serif
+
+p
+	letter-spacing: -0.5px
+
+
+// Intro section
+
+.main
+	@extend .h-full
+	background: url(../images/header-image.jpg) no-repeat center center fixed
+	background-size: cover
+	position: relative	
+
+	h1.header
+		@extend .t-1
+		@extend .t-bold
+
+// ID specific stuff here
+
+#intro
+	height: 450px
+	.header
+		@extend .t-shadow
+
+.byline
+	@extend .t-light
+	@extend .t-3
+	color: $primary-dark
+	padding: 8% 15%
+
+
+// Main features
+
+#main-features
+	.img-container
+		height: 240px
+
+
+
+// Other features
+
+#other-features
+	background: $grey-6
+
+	h1.title
+		@extend .t-2
+		@extend .t-bold
+		letter-spacing: -3px
+
+	p
+		color: $grey-2
+
+	.img-container
+		@extend .w-full
+		@extend .p-r
+		@extend .s-pxxl
+		@extend .s-pxl-v
+		height: 170px
+	
+	img
+		@extend .w-full				
+
+
+#coop
+	@extend .h-full
+	@extend .text-center
+	color: white
+	background: $secondary
+
+
+	h1.title
+		@extend .t-2
+		@extend .t-bold
+		@extend .s-ms-b
+
+
+	.abs-center
+		height: 300px	
+
+
+
