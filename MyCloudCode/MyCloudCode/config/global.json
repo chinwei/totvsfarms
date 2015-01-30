@@ -1,0 +1,11 @@
+{
+    "applications": {
+        "_default": {
+            "link": "totvsfarms"
+        }, 
+        "totvsfarms": {
+            "applicationId": "ztxOAmw9nE0TNzKcl2XQGWs1U7UwMm4VyAZLZnNv", 
+            "masterKey": "GoefwTLKABcO9SDcHT6rTazKfDrQnIko7vy36LrQ"
+        }
+    }
+}
