@@ -245,7 +245,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 136, ../sass/_utils.sass */
-.t-4, button.more, body {
+.t-4 {
+  font-size: 26px;
+}
+
+/* line 138, ../sass/_utils.sass */
+.t-5, button.more, body {
   font-size: 20px;
 }
 
@@ -292,7 +297,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 /* line 19, ../sass/screen.sass */
 .t-shadow, #intro .header {
-  text-shadow: 0px 3px 10px #646464;
+  text-shadow: 0px 6px 10px #464646;
 }
 
 /* line 22, ../sass/screen.sass */
@@ -344,41 +349,45 @@ p {
 #intro {
   height: 450px;
 }
+/* line 77, ../sass/screen.sass */
+#intro .header {
+  line-height: 1;
+}
 
-/* line 80, ../sass/screen.sass */
+/* line 81, ../sass/screen.sass */
 .byline {
   color: #479000;
   padding: 8% 15%;
 }
 
-/* line 90, ../sass/screen.sass */
+/* line 91, ../sass/screen.sass */
 #main-features .img-container {
   height: 240px;
 }
 
-/* line 97, ../sass/screen.sass */
+/* line 98, ../sass/screen.sass */
 #other-features {
   background: #f3f3f3;
 }
-/* line 100, ../sass/screen.sass */
+/* line 101, ../sass/screen.sass */
 #other-features h1.title {
   letter-spacing: -3px;
 }
-/* line 105, ../sass/screen.sass */
+/* line 106, ../sass/screen.sass */
 #other-features p {
   color: #555;
 }
-/* line 108, ../sass/screen.sass */
+/* line 109, ../sass/screen.sass */
 #other-features .img-container {
   height: 170px;
 }
 
-/* line 119, ../sass/screen.sass */
+/* line 120, ../sass/screen.sass */
 #coop {
   color: white;
   background: #EA6C39;
 }
-/* line 132, ../sass/screen.sass */
+/* line 133, ../sass/screen.sass */
 #coop .abs-center {
   height: 300px;
 }
