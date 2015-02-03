@@ -1,12 +1,12 @@
 
 // Use Parse.Cloud.define to define as many cloud functions as you want.
 // For example:
-Parse.Cloud.define("totvsfarms", function(request, response) {
+Parse.Cloud.define("hello", function(request, response) {
 
 /* global Parse,console,require */
 var Mailgun = require('mailgun');
-// Mailgun.initialize('sandbox32917.mailgun.org', 'key-50hqq6ifefy-05wv5vu7l1yd8-8cd100');
-	Mailgun.initialize('sandbox32917.mailgun.org', 'key-50hqq6ifefy-05wv5vu7l1yd8-8cd100');
+Mailgun.initialize('totvsfarms.com', 'key-e3fc55210e753a3e3294bd2a0ac29494');
+
 	Mailgun.sendEmail({
 	  to: "chinwei@totvslabs.com",
 	  from: request.params.email ,

@@ -22,17 +22,19 @@ $secondary-dark: #431F00
 .r-borders
 	border-radius: 20px
 
-button.more
+.more,
 	@extend .t-medium
 	@extend .t-5
 	@extend .s-pxl-v
 	background: none
 	border: none
+	outline: none
+	cursor: pointer
+	&:hover
+		color: #f3f3f3
 
 	i
 		color: $primary
-
-
 
 // containers
 .content
@@ -42,6 +44,8 @@ button.more
 
 
 // Global overrides
+
+
 
 body
 	line-height: 1.2
@@ -58,13 +62,44 @@ p
 	letter-spacing: -0.5px
 
 
+// header
+
+#top-bar
+	@extend .p-f
+	@extend .w-full
+	top: 0
+	height: 60px
+	z-index: 9
+
+	#logo
+		opacity: 0
+		transition: opacity 0.5s ease
+
+	#logo-white
+		opacity: 1
+		transition: opacity 0.5s ease			
+	.img-container
+		width: 170px
+
+	&.reveal
+		#logo
+			opacity: 1
+			
+
+		#logo-white
+			opacity: 0
+			
+		
+
+
 // Intro section
 
 .main
 	@extend .h-full
+	@extend .p-r
 	background: url(../images/header-image.jpg) no-repeat center center fixed
 	background-size: cover
-	position: relative	
+	
 
 	h1.header
 		@extend .t-1
@@ -89,7 +124,7 @@ p
 
 #main-features
 	.img-container
-		height: 240px
+		min-height: 240px
 
 
 
@@ -111,7 +146,7 @@ p
 		@extend .p-r
 		@extend .s-pxxl
 		@extend .s-pxl-v
-		height: 170px
+		// height: 170px
 	
 	img
 		@extend .w-full				
@@ -134,4 +169,154 @@ p
 		height: 300px	
 
 
+.remodal.form-container
+	@extend .p-r
 
+	
+	h2.title
+		@extend .t-3
+		@extend .t-light
+		@extend .s-mm-b
+
+	label
+		@extend .t-medium
+		@extend .t-6
+		@extend .grey-2
+
+
+	input, textarea
+		@extend .s-ps
+		@extend .t-5
+		@extend .grey-2
+		@extend .t-light
+		@extend .s-ms-b
+		background: $grey-6
+
+
+	.submit
+		@extend .d-ib
+		@extend .w-full
+		@extend .s-ps
+		@extend .t-6
+		@extend .rounded-s
+		@extend .s-pm
+		@extend .s-pm-v
+		background: $secondary
+		border: none
+		color: white
+		&:hover
+			background: $secondary + #222222
+
+	p
+		@extend .s-mm-b
+
+
+#thank-you
+	@extend .p-a
+	width: 86%
+	margin: 0 auto
+	opacity: 0
+	display: none
+	&.reveal
+		display: block
+
+
+// media queries
+@media only screen and (orientation : landscape) 
+	
+	#section-1
+		background-attachment: scroll
+
+	#top-bar
+		background: rgba(255,255,255,0.9)	
+		height: 35px
+		padding: 3px
+		#logo
+			opacity: 1
+		#logo-white
+			opacity: 0		
+		.img-container
+			width: 90px
+
+	#intro 
+		height: 120px
+		> .header
+			font-size: 48px	
+			&+p
+				font-size: 10px
+	.byline
+		font-size: 24px	
+		padding: 0			
+	.more
+		font-size: 10px	
+		padding: 15px		
+	.content 
+		padding: 30px
+	.byline
+		font-size: 24px	
+	.t-2
+		font-size: 48px	
+	#coop h1.title	
+		font-size: 40px
+
+	#main-features 
+		.img-container
+			min-height: 0
+			padding: 10px 35px
+
+	#other-features 
+		.img-container
+			padding: 10px 70px
+		p
+			font-size: 16px	
+	#coop
+		padding: 20px
+		.abs-center
+			height: 180px
+		.title
+			font-size: 36px
+		p
+			font-size: 14px	
+
+@media only screen and (orientation : portrait) 
+	body
+		// background: blue
+	#top-bar
+		background: rgba(255,255,255,0.9)	
+		height: 50px
+		padding: 3px
+		#logo
+			opacity: 1
+		#logo-white
+			opacity: 0	
+		.img-container
+			width: 140px		
+
+
+	.t-2
+		font-size: 48px
+	.s-pxl
+		padding: 25px
+	#section-1
+		background-attachment: scroll
+	.content 
+		padding: 20px
+	.byline
+		font-size: 24px	
+		padding: 0
+	#intro 
+		height: 250px
+		> .header
+			font-size: 56px
+	#coop h1.title	
+		font-size: 40px
+
+	#main-features 
+		.img-container
+			min-height: 180px
+
+	#other-features 
+		.img-container
+			padding: 10px 70px
+	#coop
+		padding: 20px		

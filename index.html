@@ -2,26 +2,38 @@
 
 <html>
 <head>
-	
+	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="bower_components/pure/pure-min.css">
 	<!--[if lte IE 8]>
 	    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
 	<![endif]-->
 	<!--[if gt IE 8]><!-->
-	  
+	  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
 	<!--<![endif]-->
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css">
+	<!-- <link rel="stylesheet" href="bower_components/reveal/reveal.css"> -->
+	<link rel="stylesheet" href="bower_components/remodal/jquery.remodal.css">
 	<link rel="stylesheet" href="stylesheets/screen.css">
 </head>
 <body>
+	
 	<div class="pure-g">
-		<div class="pure-u-1-1 main p-bg-fixed">
+		
+		<div id='top-bar' class="pure-u-1-1 p-f">
+			<div class="img-container p-r">
+				<img id='logo-white' class='p-a' src="images/logo-white.svg" alt="">
+				<img id='logo' class='hide p-a' src="images/logo.svg" alt="">
+			</div>
+
+		</div>
+		
+		<div id='section-1' class="pure-u-1-1 main p-bg-fixed">
 			<div class="w-full h-full">
 				<div id='intro' class="abs-center text-center">
 					<h1 class='header white'>Grow, <br/> efficiently</h1>
 					<p class='white t-4 t-shadow t-bold'>The best software for your farm</p>
-					<button class='more white t-shadow'>Find out more <i class="fa fa-chevron-circle-right"></i></button>
+					<button data-remodal-target="modal" class='more white t-shadow'>Find out more <i class="fa fa-chevron-circle-right"></i></button>
 				</div>
 			</div>
 		</div>
@@ -29,51 +41,79 @@
 
 	<!-- Byline -->
 
-	<div class="pure-g content text-center">
-		
-	    <div class="pure-u-1-1">
+	<div id='section-2' class="pure-g text-center">
+		<div class="content">
+		    <div class="pure-u-1-1">
+			    <h2 class='byline'>We help farmers manage more than 4 million acres of farmland in real time and reduce their operating costs by 30%</h2>
+		    </div>
+		</div>
+	    
 
-	    <!-- <img src="images/byline-image.jpg" height="122" width="224" alt=""> -->
-		
-	    <h2 class='byline'>We help farmers manage more than 4 million acres of farmland in real time and reduce their operating costs by 30%</h2>
-	    </div>
-	
 	
 	<!-- Main Features -->
 
-	
-		<div id="main-features">
-
-		    <div class="pure-u-1-3 s-ps">
-				<div class='s-pxl img-container'>
-					<img src="images/main-features-1.jpg" alt="" class="w-full">
-				</div>
-			    
-			    <p>Control your Production, Costs, Inventory, Sales, Equipment & More, all in real time</p>
-		    </div>
-		    
-			
-		    <div class="pure-u-1-3 s-ps">
-				<div class="s-pxl img-container">
-					<img src="images/main-features-2.jpg" alt="" class="w-full">	
-				</div>
-			    <p>Improve your profitability and be more efficient</p>
-		    </div>
-		    <div class="pure-u-1-3 s-ps">
-				<div class="s-pxl img-container">
-				    <img src="images/main-features-3.jpg" alt="" class="w-full">
-				</div>
-					<p>Manage your farm from everywhere, from your computer, smartphone and tablet</p>
-			    </div>
-	
-		</div>
+		
+		
 
 
-		<button class='more block-center grey-2'>Find out more <i class="fa fa-chevron-circle-right"></i></button>
+		<button data-remodal-target="modal" class='more block-center grey-2'>Find out more <i class="fa fa-chevron-circle-right fa-lg"></i></button>
 
 		
 
 	</div>	
+
+
+
+
+
+
+
+
+	<div id='main-features' class="pure-g text-center">
+			<div class="content">
+				
+			    
+			    
+			    
+
+				<div class="pure-u-1 pure-u-md-1-3 s-ps">
+					<div class="img-container s-pxl">
+						<img src="images/main-features-1.jpg" class='w-full'>
+					</div>
+				    <p>Control your Production, Costs, Inventory, Sales, Equipment & More, all in real time</p>
+			    </div>
+			    <div class="pure-u-1 pure-u-md-1-3 s-ps">
+					<div class="img-container s-pxl">
+						<img src="images/main-features-2.jpg" class='w-full'>
+					</div>
+				    <p>Improve your profitability and be more efficient</p>
+			    </div>
+			    <div class="pure-u-1 pure-u-md-1-3 s-ps">
+					<div class="img-container s-pxl">
+						<img src="images/main-features-3.jpg" class='w-full'>
+					</div>
+				    <p>Manage your farm from everywhere, from your computer, smartphone and tablet</p>
+				</div>
+
+				<button data-remodal-target="modal" class='more clearfix grey-2' data-reveal-id="myModal">Find out more <i class="fa fa-chevron-circle-right fa-lg"></i></button>
+
+			</div>
+
+			
+
+		
+				
+			
+	</div>
+
+
+
+
+
+
+
+
+
 
 	<!-- Other features -->
 
@@ -82,21 +122,21 @@
 	<div id='other-features' class="pure-g text-center">
 			<div class="content">
 				<h1 class='title'>Other features</h1>
-			    <div class="pure-u-1-3 s-ps">
+			    <div class="pure-u-1 pure-u-md-1-3 s-ps">
 			    	<div class="img-container">
 			    		<img src="images/other-features-clock.svg" alt="">
 			    	</div>
 			    	
 				    <p>Check records of machinery, equipment, people and farm activities all in the same place and in real time</p>
 			    </div>
-			    <div class="pure-u-1-3 s-ps">
+			    <div class="pure-u-1 pure-u-md-1-3 s-ps">
 			    	<div class="img-container">
 			    		<img src="images/other-features-cloud.svg" alt="">
 			    	</div>
 
 				    <p>Track the rain fall on each of your crops</p>
 			    </div>
-			    <div class="pure-u-1-3 s-ps">
+			    <div class="pure-u-1 pure-u-md-1-3 s-ps">
 					
 					<div class="img-container">
 						<img src="images/other-features-dashboard.svg" alt="">
@@ -104,26 +144,26 @@
 				    <p>Track all costs in the field from your dashboards and optimize your operation</p>
 				</div>
 
-				<div class="pure-u-1-3 s-ps">
+				<div class="pure-u-1 pure-u-md-1-3 s-ps">
 					<div class="img-container">
 						<img src="images/other-features-cal.svg" alt="">
 					</div>
 				    <p>Use our built-in calendar to plan and control all your activities </p>
 			    </div>
-			    <div class="pure-u-1-3 s-ps">
+			    <div class="pure-u-1 pure-u-md-1-3 s-ps">
 					<div class="img-container">
 						<img src="images/other-features-wheat.svg" alt="">
 					</div>
 				    <p>Keep track of your production yield and field performance </p> 
 			    </div>
-			    <div class="pure-u-1-3 s-ps">
+			    <div class="pure-u-1 pure-u-md-1-3 s-ps">
 					<div class="img-container">
 						<img src="images/other-features-tractor.svg" alt="">
 					</div>
 				    <p>Better control your harvesting process</p>
 				</div>
 
-				<button class='more clearfix grey-2'>Find out more <i class="fa fa-chevron-circle-right"></i></button>
+				<button data-remodal-target="modal" class='more clearfix grey-2' data-reveal-id="myModal">Find out more <i class="fa fa-chevron-circle-right fa-lg"></i></button>
 
 			</div>
 
@@ -142,41 +182,60 @@
 				<div class="abs-center text-center">
 					<h1 class='title'>Are you a Cooperative?</h1>
 					<p>Learn how you can help your farmers to cut down more than 30% of their costs</p>
-					<button class='more white'>Find out more <i class="fa fa-chevron-circle-right fa-lg"></i></button>
+						<button class='more white' data-remodal-target="modal">Find out more <i class="fa fa-chevron-circle-right fa-lg"></i></button>
 
-					<div id="form-container">
-
-						<div id="thank-you-note">
-							<h2>Thank You for your message!</h2>	
-						</div>
-						
-
-						<form id="commentForm">
-					
-							<input id="name" name="name" type="text" placeholder="NAME" title="Your name is required." required />
-							
-							<input type="email" name="email" id="email" placeholder="EMAIL" required>
-							
-							
-							<textarea name="comments" id="comments" rows="4" placeholder="LEAVE YOUR MESSAGE HERE" required></textarea>
-							<div class="clearfix"></div>
-							<button id="submit-btn" type="submit" class="submit" value="Send">Submit <i id="submit-loader" class="preloader fa fa-spinner fa-spin fa-1g"></i></button>							
-						</form>
-					</div>
 
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<!-- <div id="pure-g">
-		<div class="pure-u-1-1">totvs labs stuff here</div>
-	</div> -->
 
+	<div class="remodal-bg pure-g">
+	
+	</div>
+
+
+	<div class="remodal pure-g form-container" data-remodal-id="modal">
+	   <div class="pure-u-1-1 ovh">
+	   		
+			<div id="thank-you" class='text-center'>
+				<h2 class='title'>Thank you!</h2>
+				<div class="img-container s-pxxl s-pm-v">
+					<img class='w-full' src="images/form-check.svg" alt="">
+				</div>
+				<h2 class='title'>We have received your inquiry and will be contacting you shortly.</h2>
+			</div>
+   			<form id="contact-form" class='pure-form pure-form-stacked'>
+   				
+   				<h2 class="title">Leave us a message!</h2>
+   				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, error, commodi?</p>
+   				<label for="name">Name</label>
+   				<input class='pure-input-1' id="name" name="name" type="text" placeholder="Name" title="Your name is required." required />
+   				<label for="email">Email</label>
+   				<input class='pure-input-1' type="email" name="email" id="email" placeholder="Email" required>
+   				<label for="phone">Phone</label>
+   				<input class='pure-input-1' type="tel" name="phone" id="phone" placeholder="Phone Number" required>
+   				<label for="comments">Message</label>
+   				<textarea class='pure-input-1' name="comments" id="comments" rows="4" placeholder="Send us an inquiry!" required></textarea>
+   				<div class="clearfix"></div>
+   				<button id="submit-btn" type="submit" class="submit" value="Send">Submit</button>							
+   			</form>
+	   			
+	   		</div>
+
+	</div>
+
+
+	<!-- // <script src='http://code.jquery.com/jquery-1.6.min.js'></script> -->
 	<script src='bower_components/jquery/dist/jquery.min.js'></script>
 	<script src='bower_components/gsap/src/minified/TweenMax.min.js'></script>
+	<script src='bower_components/remodal/jquery.remodal.min.js'></script>
+	<script src='bower_components/flowtype/flowtype.js'></script>
+
 	<script src='js/jquery.validate.min.js'></script>
 	<script src='https://www.parse.com/downloads/javascript/parse-1.3.4.min.js'></script>
+	
 
 	<script src='js/app.js'></script>
 	

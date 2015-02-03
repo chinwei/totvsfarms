@@ -1,33 +1,25 @@
+
 /* global $,document,console,Parse */
 $(document).ready(function() {
   
-  // var parseAPPID = "xnbnZqfqDnXdTvIPR813AcqF3rjE1QSWL7on9Hbq";
-  // var parseJSID = "iIWzUXFpzmMukn1JAIcOepOaZ5fkz412Pj0Yd83Q";
+  var inst = $.remodal.lookup[$('[data-remodal-id=modal]').data('remodal')];
+ 
+
+  // var parseAPPID = "KtL3tUwbxRKJu05KVpTdtglHFoMRIFMmU11gFiuv";
+  // var parseJSID = "PZEACZ9wMCORcVZatTvF5JPYin1GDUf8fYS4nqr3";
   
-  var parseAPPID = "ztxOAmw9nE0TNzKcl2XQGWs1U7UwMm4VyAZLZnNv";
-  var parseJSID = "eM9E2bhGd4W9dJj5sZqiHHVk2xEPJluVk7tvhFyj";
+  var parseAPPID = "xnbnZqfqDnXdTvIPR813AcqF3rjE1QSWL7on9Hbq";
+  var parseJSID = "iIWzUXFpzmMukn1JAIcOepOaZ5fkz412Pj0Yd83Q";
 
   Parse.initialize(parseAPPID, parseJSID);
-  var CommentObject = Parse.Object.extend("totvsfarms");
+  var CommentObject = Parse.Object.extend("Totvsfarms");
   
-  $( "#commentForm" ).validate({
-      errorPlacement: function(error,element) {
-      return true;
-    }
-  });
-  
-  $("#commentForm").on("submit", function(e) {
+  $("#contact-form").on("submit", function(e) {
     e.preventDefault();
-
-    if (!$("form").valid()) return false;
 
     console.log("Handling the submit");
     //add error handling here
     //gather the form data
-    // TweenLite.to($('#submit-loader'), 0.8, {autoAlpha: 1, ease:Power2.easeInOut})
-
-    $('#submit-btn').addClass('active');
-
 
     var data = {};
     data.name = $("#name").val();
@@ -38,11 +30,31 @@ $(document).ready(function() {
     comment.save(data, {
       success:function() {
         console.log("Success");
-        
-        TweenLite.to($('#thank-you-note'), 0.8, {autoAlpha: 1, paddingTop: 50, height: 150, ease:Power2.easeInOut})
-        TweenLite.to($('#commentForm'), 0.8, {autoAlpha: 0, height: 0, ease:Power2.easeInOut})
-        
-        Parse.Cloud.run('totvsfarms', { 
+
+        $('#thank-you').addClass('reveal');
+
+        TweenMax.to($('#contact-form'), 0.5, {css: {
+          top: '50px',
+          opacity: 0
+        },
+        onComplete: function(){
+          setTimeout(function(){
+            inst.close();
+            $('#thank-you').removeClass('reveal');
+            $('#contact-form').css('opacity', '1');
+            $('#contact-form input, #contact-form textarea').val('')
+          }, 1000)
+          
+        }
+        })
+        TweenMax.to($('#thank-you'), 0.7, {css: {
+          opacity: 1
+        },
+        ease:Quad.easeOut
+      })
+
+        // run function
+        Parse.Cloud.run('hello', { 
               "name": data.name,
               "email": data.email,
               "comments": data.comments
@@ -55,7 +67,7 @@ $(document).ready(function() {
                  // alert(error.message); 
               } 
            } 
-        );
+           )
       },
       error:function(e) {
         console.dir(e);
@@ -65,5 +77,48 @@ $(document).ready(function() {
   });
   
 });
+
+
+
+
+$(document).on('open', '.remodal', function () {
+    console.log('open');
+});
+
+
+
+
+
+
+var wh = $(window).height();
+
+var bylineTop = $('#section-1').height();
+var otherFeaturesTop = $('#section-2').height() + bylineTop;
+var coopTop = $('#other-features').height() + otherFeaturesTop;
+
+
+$(window).resize(function(){
+
+  bylineTop = $('#section-1').height();
+  otherFeaturesTop = $('#section-2').height() + bylineTop;
+  coopTop = $('#other-features').height() + otherFeaturesTop;
+
+})
+
+$(window).scroll(function(e){
+
+  if ($(window).scrollTop()>bylineTop && $(window).scrollTop()<coopTop) {
+    // if scroll is in between 1t and last screen, show blue logo
+    $('#top-bar').addClass('reveal');
+
+  } else if ($(window).scrollTop()< bylineTop || $(window).scrollTop()> coopTop) {
+    // if scroll is in the first screen or last screen, show white logo
+    $('#top-bar').removeClass('reveal');
+
+  }
+
+
+})
+
 
 
