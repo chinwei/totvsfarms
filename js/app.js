@@ -93,8 +93,9 @@ $(document).on('open', '.remodal', function () {
 var wh = $(window).height();
 
 var bylineTop = $('#section-1').height();
+var mainFeaturesTop = $('#main-features').height();
 var otherFeaturesTop = $('#section-2').height() + bylineTop;
-var coopTop = $('#other-features').height() + otherFeaturesTop;
+var coopTop = $('#other-features').height() + otherFeaturesTop + mainFeaturesTop;
 
 
 $(window).resize(function(){
@@ -106,6 +107,8 @@ $(window).resize(function(){
 })
 
 $(window).scroll(function(e){
+
+  // console.log($(window).scrollTop());
 
   if ($(window).scrollTop()>bylineTop && $(window).scrollTop()<coopTop) {
     // if scroll is in between 1t and last screen, show blue logo
