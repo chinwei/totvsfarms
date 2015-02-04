@@ -80,10 +80,12 @@ p
 	#logo
 		opacity: 0
 		transition: opacity 0.5s ease
+		width: 100% // for IE8
 
 	#logo-white
 		opacity: 1
-		transition: opacity 0.5s ease			
+		transition: opacity 0.5s ease	
+		width: 100% // for IE8		
 	.img-container
 		width: 170px
 		padding: 5px
@@ -361,4 +363,13 @@ p
 			padding: 10px 10px 10px 20px
 			text-align: left
 	#coop
-		padding: 20px		
+		padding: 20px	
+
+// hacks for IE 8
+
+#intro-container, #coop
+	height: 800px\9		
+
+#coop .abs-center
+	top: 300px\9		
+	height: inherit\9
