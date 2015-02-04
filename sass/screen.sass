@@ -31,16 +31,22 @@ $secondary-dark: #431F00
 	outline: none
 	cursor: pointer
 	&:hover
-		color: #f3f3f3
+		color: $grey-3
+
 
 	i
 		color: $primary
+	&.white
+		i
+			color: white	
+		&:hover
+			color: $grey-5			
 
 // containers
 .content
 	width: 960px
 	margin: 0 auto
-	@extend .s-pxl
+	@extend .s-pm
 
 
 // Global overrides
@@ -80,6 +86,7 @@ p
 		transition: opacity 0.5s ease			
 	.img-container
 		width: 170px
+		padding: 5px
 
 	&.reveal
 		#logo
@@ -117,7 +124,7 @@ p
 	@extend .t-light
 	@extend .t-3
 	color: $primary-dark
-	padding: 8% 15%
+	padding: 50px 50px 0 30px
 
 
 // Main features
@@ -210,6 +217,19 @@ p
 	p
 		@extend .s-mm-b
 
+#labs
+	background: $secondary-dark
+	color: $secondary
+	@extend .t-6
+	@extend .text-center	
+	@extend .s-ps
+
+	a
+		color: $secondary
+		text-decoration: none
+		&:hover
+			text-decoration: underline	
+
 
 #thank-you
 	@extend .p-a
@@ -266,7 +286,16 @@ p
 
 	#other-features 
 		.img-container
-			padding: 10px 70px
+			padding: 10px 0 0 0
+			width: 20%
+			float: left
+			min-height: 0
+
+		.desc-container
+			width: 80%
+			float: left
+			padding: 10px 10px 10px 20px
+			text-align: left
 		p
 			font-size: 16px	
 	#coop
@@ -277,6 +306,11 @@ p
 			font-size: 36px
 		p
 			font-size: 14px	
+
+
+
+
+
 
 @media only screen and (orientation : portrait) 
 	

@@ -185,8 +185,8 @@ body.remodal-is-active .remodal {
 .remodal-close {
     position: absolute;
     top: 5px;
-    right: 5px;
-
+    right: 15px;
+    
     width: 28px;
     height: 28px;
 
@@ -196,10 +196,19 @@ body.remodal-is-active .remodal {
     transition: background 0.2s ease-out;
     text-decoration: none;
 
+
     -webkit-border-radius: 50%;
     border-radius: 50%;
 }
 
+.remodal-close a {
+    text-decoration: none;
+    color: #555;
+}
+
+.remodal-close a:hover {
+    text-decoration: underline;
+}
 /*.remodal-close:after {
 
     font-family: 'source sans pro, sans-serif';
