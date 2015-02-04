@@ -443,6 +443,10 @@ p {
 #other-features p {
   color: #555;
 }
+/* line 144, ../sass/screen.sass */
+#other-features .img-container {
+  min-height: 190px;
+}
 
 /* line 155, ../sass/screen.sass */
 #coop {
@@ -481,7 +485,7 @@ p {
   display: block;
 }
 
-@media only screen and (orientation: landscape) {
+@media only screen and (orientation: landscape) and (max-device-width: 667px) {
   /* line 227, ../sass/screen.sass */
   #section-1 {
     background-attachment: scroll;
@@ -584,76 +588,86 @@ p {
   }
 }
 @media only screen and (orientation: portrait) {
-  /* line 284, ../sass/screen.sass */
+  /* line 283, ../sass/screen.sass */
   #top-bar {
     background: rgba(255, 255, 255, 0.9);
     height: 50px;
     padding: 3px;
   }
-  /* line 288, ../sass/screen.sass */
+  /* line 287, ../sass/screen.sass */
   #top-bar #logo {
     opacity: 1;
   }
-  /* line 290, ../sass/screen.sass */
+  /* line 289, ../sass/screen.sass */
   #top-bar #logo-white {
     opacity: 0;
   }
-  /* line 292, ../sass/screen.sass */
+  /* line 291, ../sass/screen.sass */
   #top-bar .img-container {
     width: 140px;
   }
 
-  /* line 296, ../sass/screen.sass */
+  /* line 295, ../sass/screen.sass */
   .t-2, #other-features h1.title, #coop h1.title {
     font-size: 48px;
   }
 
-  /* line 298, ../sass/screen.sass */
+  /* line 297, ../sass/screen.sass */
   .s-pxl, .content {
     padding: 25px;
   }
 
-  /* line 300, ../sass/screen.sass */
+  /* line 299, ../sass/screen.sass */
   #section-1 {
     background-attachment: scroll;
   }
 
-  /* line 302, ../sass/screen.sass */
+  /* line 301, ../sass/screen.sass */
   .content {
     padding: 20px;
   }
 
-  /* line 304, ../sass/screen.sass */
+  /* line 303, ../sass/screen.sass */
   .byline {
     font-size: 24px;
     padding: 0;
   }
 
-  /* line 307, ../sass/screen.sass */
+  /* line 306, ../sass/screen.sass */
   #intro {
     height: 250px;
   }
-  /* line 309, ../sass/screen.sass */
+  /* line 308, ../sass/screen.sass */
   #intro > .header {
     font-size: 56px;
   }
 
-  /* line 311, ../sass/screen.sass */
+  /* line 310, ../sass/screen.sass */
   #coop h1.title {
     font-size: 40px;
   }
 
-  /* line 315, ../sass/screen.sass */
+  /* line 314, ../sass/screen.sass */
   #main-features .img-container {
     min-height: 180px;
   }
 
-  /* line 319, ../sass/screen.sass */
+  /* line 318, ../sass/screen.sass */
   #other-features .img-container {
-    padding: 10px 70px;
+    padding: 10px 0 0 0;
+    width: 20%;
+    float: left;
+    min-height: 0;
+  }
+  /* line 324, ../sass/screen.sass */
+  #other-features .desc-container {
+    width: 80%;
+    float: left;
+    padding: 10px 10px 10px 20px;
+    text-align: left;
   }
 
-  /* line 321, ../sass/screen.sass */
+  /* line 329, ../sass/screen.sass */
   #coop {
     padding: 20px;
   }

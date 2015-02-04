@@ -146,7 +146,7 @@ p
 		@extend .p-r
 		@extend .s-pxxl
 		@extend .s-pxl-v
-		// height: 170px
+		min-height: 190px
 	
 	img
 		@extend .w-full				
@@ -222,7 +222,7 @@ p
 
 
 // media queries
-@media only screen and (orientation : landscape) 
+@media only screen and (orientation : landscape) and (max-device-width : 667px) 
 	
 	#section-1
 		background-attachment: scroll
@@ -279,8 +279,7 @@ p
 			font-size: 14px	
 
 @media only screen and (orientation : portrait) 
-	body
-		// background: blue
+	
 	#top-bar
 		background: rgba(255,255,255,0.9)	
 		height: 50px
@@ -317,6 +316,15 @@ p
 
 	#other-features 
 		.img-container
-			padding: 10px 70px
+			padding: 10px 0 0 0
+			width: 20%
+			float: left
+			min-height: 0
+
+		.desc-container
+			width: 80%
+			float: left
+			padding: 10px 10px 10px 20px
+			text-align: left
 	#coop
 		padding: 20px		
