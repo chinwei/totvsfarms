@@ -8,7 +8,8 @@ var Mailgun = require('mailgun');
 Mailgun.initialize('totvsfarms.com', 'key-e3fc55210e753a3e3294bd2a0ac29494');
 
 	Mailgun.sendEmail({
-	  to: "chinwei@totvslabs.com",
+	  // to: "chinwei@totvslabs.com",
+	  to: "farms@totvslabs.com",
 	  from: request.params.email ,
 	  subject: "Email from "+request.params.name+"",
 	  text: request.params.comments 
