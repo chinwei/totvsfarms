@@ -26,6 +26,7 @@ $secondary-dark: #431F00
 	@extend .t-medium
 	@extend .t-5
 	@extend .s-pxl-v
+	padding-bottom: 0
 	background: none
 	border: none
 	outline: none
@@ -74,7 +75,7 @@ p
 	@extend .p-f
 	@extend .w-full
 	top: 0
-	height: 60px
+	height: 40px
 	z-index: 9
 
 	#logo
@@ -126,7 +127,7 @@ p
 	@extend .t-light
 	@extend .t-3
 	color: $primary-dark
-	padding: 50px 50px 0 30px
+	padding: 80px 50px 0 30px
 
 
 // Main features
@@ -244,14 +245,14 @@ p
 
 
 // media queries
-@media only screen and (orientation : landscape) and (max-device-width : 667px) 
+@media only screen and (orientation : landscape) and (max-device-width : 1024px) 
 	
 	#section-1
 		background-attachment: scroll
 
 	#top-bar
 		background: rgba(255,255,255,0.9)	
-		height: 35px
+		height: 30px
 		padding: 3px
 		#logo
 			opacity: 1
@@ -261,16 +262,16 @@ p
 			width: 90px
 
 	#intro 
-		height: 120px
+		height: 300px
 		> .header
-			font-size: 48px	
+			font-size: 100px	
 			&+p
-				font-size: 10px
+				font-size: 24px
 	.byline
 		font-size: 24px	
 		padding: 0			
 	.more
-		font-size: 10px	
+		font-size: 16px	
 		padding: 15px		
 	.content 
 		padding: 30px
@@ -313,12 +314,11 @@ p
 
 
 
-
-@media only screen and (orientation : portrait) 
+@media only screen and (orientation : portrait)
 	
 	#top-bar
 		background: rgba(255,255,255,0.9)	
-		height: 50px
+		height: 40px
 		padding: 3px
 		#logo
 			opacity: 1
@@ -335,7 +335,7 @@ p
 	#section-1
 		background-attachment: scroll
 	.content 
-		padding: 20px
+		padding: 50px
 	.byline
 		font-size: 24px	
 		padding: 0
@@ -364,6 +364,15 @@ p
 			text-align: left
 	#coop
 		padding: 20px	
+
+@media only screen and (orientation : portrait) and (min-width: 640) and (max-width: 1024)
+	#intro 
+		height: 250px
+		> .header
+			font-size: 120px
+	.byline
+		padding: 80px 80px 0 80px		
+
 
 // hacks for IE 8
 
